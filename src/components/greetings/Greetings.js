@@ -3,16 +3,19 @@ import styleGreetings from './Greetings.module.css'
 import style from '../../common/styles.module.css'
 import {Link} from "react-scroll";
 import Social from "../social/Social";
-/*import photo from '../../images/photo.jpg'*/
+import linkedin from '../../images/icons/linkedin.svg'
+import telegram from '../../images/icons/telegram.svg'
+import instagram from '../../images/icons/instagram.svg'
+import vk from '../../images/icons/vk.svg'
 
 const Greetings = (props) => {
     const {lang, themes} = props
 
     const social = [
-        {id:1, image:'', title:'LinkedIn',description:'+375-(29)-111-11-11'},
-        {id:2, image:'', title:'Facebook',description:'+375-(29)-111-11-11'},
-        {id:3, image:'', title:'Telegram',description:'+375-(29)-111-11-11'},
-        {id:4, image:'', title:'Instagram',description:'+375-(29)-111-11-11'}
+        {id:1, image:linkedin,href:'https://www.linkedin.com/feed/'},
+        {id:2, image:telegram,href:'https://t.me/Noblls'},
+        {id:3, image:instagram,href:'https://www.instagram.com/sergikon/'},
+        {id:4, image:vk,href:'https://vk.com/id41270801'}
     ]
 
     return (
@@ -24,9 +27,8 @@ const Greetings = (props) => {
                             <h1>Hello,<br/> I'm Sergei Veretilo a<br/><div className={styleGreetings.changeText} style={{color:'#dc965a'}}>Front - End Developer</div></h1>
                         </div>
                         <div>
-                           {/* <img className={styleGreetings.photo} src={photo} alt="photo"/>*/}
                         </div>
-                        <button className={styleGreetings.greetingBtn}><Link to={'skills'} spy={true} smooth={true}>See Who I'M</Link></button>
+                        <button className={styleGreetings.greetingBtn}><Link to={'about'} spy={true} smooth={true}>See Who I'M</Link></button>
                     </>
                     :
                     <>
@@ -34,9 +36,8 @@ const Greetings = (props) => {
                             <h1>Превет,<br/>Я Сергей Веретило и<br/><div className={styleGreetings.changeText} style={{color:'#dc965a'}}>Я Фронт-Энд Разработчик</div></h1>
                         </div>
                         <div>
-                            {/*<img className={styleGreetings.photo} src={photo} alt="photo"/>*/}
                         </div>
-                        <button className={styleGreetings.greetingBtn}><Link to={'skills'} spy={true} smooth={true}>Посмотрите, кто я</Link></button>
+                        <button className={styleGreetings.greetingBtn}><Link to={'about'} spy={true} smooth={true}>Посмотрите, кто я</Link></button>
                     </>
                 }
 
@@ -50,6 +51,7 @@ const Greetings = (props) => {
                                 image={m.image}
                                 title={m.title}
                                 description={m.description}
+                                href={m.href}
                             />
                         )
                     })

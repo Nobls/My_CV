@@ -2,10 +2,10 @@ import React from 'react';
 import styleSkills from './Skills.module.css'
 import style from '../../common/styles.module.css'
 import SkillCard from "../skillCard/SkillCard";
-import reactIcon from '../../images/imagesSkills/reactImg.png'
-import jsIcon from '../../images/imagesSkills/js.png'
-import htmlIcon from '../../images/imagesSkills/html.png'
-import cssIcon from '../../images/imagesSkills/css.png'
+import reactIcon from '../../images/icons/react.png'
+import jsIcon from '../../images/icons/javascript.png'
+import htmlIcon from '../../images/icons/html5.png'
+import cssIcon from '../../images/icons/css3.png'
 
 
 const Skills = () => {
@@ -16,7 +16,7 @@ const Skills = () => {
             imageModal:htmlIcon,
             title: 'HTML',
             description: 'HTML',
-            descriptionModal:'HTML ZAEBOK'
+            descriptionModal:'HTML'
         },
         {
             id: 2,
@@ -24,7 +24,7 @@ const Skills = () => {
             imageModal:reactIcon,
             title: 'React',
             description: 'React',
-            descriptionModal:'React ZAEBOK'
+            descriptionModal:'React'
         },
         {
             id: 3,
@@ -32,7 +32,7 @@ const Skills = () => {
             imageModal:cssIcon,
             title: 'CSS',
             description: 'CSS',
-            descriptionModal:'CSS ZAEBOK'
+            descriptionModal:'CSS'
         },
         {
             id: 4,
@@ -40,7 +40,7 @@ const Skills = () => {
             imageModal:jsIcon,
             title: 'JS',
             description: 'JS',
-            descriptionModal:'JS ZAEBOK'
+            descriptionModal:'JS'
         },
 
     ]

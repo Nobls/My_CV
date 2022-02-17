@@ -16,6 +16,7 @@ const Nav = (props) => {
 
     const navItem = [
         {key: 1, id: 'home', title: 'Home', href: 'App.js'},
+        {key: 1, id: 'about', title: 'About us', href: 'About.js'},
         {key: 2, id: 'skills', title: 'Skills', href: 'Skills.js'},
         {key: 3, id: "project", title: 'Projects', href: 'Projects.js'},
         {key: 4, id: "contacts", title: 'Contacts', href: 'Contacts.js'}

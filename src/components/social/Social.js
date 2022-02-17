@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Social = (props) => {
-    const {image, title, description} = props
+    const {image, title, description, href} = props
     return (
         <div>
-            <a href={description}>
+            <a href={href} target="_blank">
                 <img src={image} alt={title}/>
             </a>
             <h4>{title}</h4>

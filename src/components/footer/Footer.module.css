@@ -1,0 +1,12 @@
+.footerBg{
+    background-color: #f5d090;
+
+
+}
+
+.footer{
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

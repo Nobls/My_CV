@@ -1,10 +1,30 @@
 .skills{
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    font-family: 'Nunito';
     justify-content: space-around;
     align-items: center;
 }
 
 .skillsBg{
     background-color: #1c1d24;
+}
+
+.skillsItem{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.skillsTitle{
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: rgb(229,230,230);
+}
+
+.skillsSubTitle{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }

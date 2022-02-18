@@ -19,7 +19,7 @@ function App() {
           <div className="App">
               <Header lang={lang} setLang={setLang} themes={themes} setThemes={setThemes}/>
               <Greetings lang={lang} themes={themes}/>
-              <About/>
+              <About lang={lang}/>
               <Skills lang={lang} themes={themes}/>
               <Projects lang={lang} themes={themes}/>
               <Form lang={lang} themes={themes}/>

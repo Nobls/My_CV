@@ -5,10 +5,10 @@ import styleSkillCard from './SkillCard.module.css'
 const SkillCard = (props) => {
     const {image, title, description}= props
     return (
-        <div >
-            <div>
+        <div className={styleSkillCard.skillCardItems}>
+            <div className={styleSkillCard.skillCardItem}>
                 <img className={styleSkillCard.img} src={image} alt="title"/>
-                <h3>{title}</h3>
+                <h3 className={styleSkillCard.skillCardItemTitle}>{title}</h3>
                 <p>{description}</p>
             </div>
         </div>

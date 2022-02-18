@@ -1,4 +1,23 @@
-.img{
+.img {
     width: 100px;
     height: 100px;
+}
+
+.skillCardItems {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 200px;
+    height: 200px;
+    background-color: #131416;
+}
+
+.skillCardItem {
+
+}
+
+.skillCardItemTitle {
+    text-align: center;
 }

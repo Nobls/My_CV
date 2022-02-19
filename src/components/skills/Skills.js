@@ -14,7 +14,8 @@ import figmaIcon from '../../images/icons/figma.png'
 import bemIcon from '../../images/icons/bem.jpg'
 
 
-const Skills = () => {
+const Skills = (props) => {
+    const {lang} = props
     const allSkills = [
         {
             id: 1,
@@ -80,12 +81,25 @@ const Skills = () => {
     return (
         <div className={styleSkills.skillsBg} id={'skills'}>
             <div className={`${styleSkills.skills} ${style.container}`}>
-                <div>
-                    <h3 className={styleSkills.skillsTitle}>My Skills</h3>
-                    <h5 className={styleSkills.skillsSubTitle}>
-                        I applied the knowledge of these skills to the creation of my own projects <br/> and those of my employers.
-                    </h5>
-                </div>
+                {lang ?
+                    <>
+                        <div>
+                            <h3 className={styleSkills.skillsTitle}>My Skills</h3>
+                            <h5 className={styleSkills.skillsSubTitle}>
+                                I applied the knowledge of these skills to the creation of my own projects <br/> and those of my employers.
+                            </h5>
+                        </div>
+                    </>
+                    :
+                    <>
+                        <div>
+                            <h3 className={styleSkills.skillsTitle}>Мои Навыки</h3>
+                            <h5 className={styleSkills.skillsSubTitle}>
+                                Я применял эти навыки при создании собственных проектов <br/> и проектов моих работодателей.
+                            </h5>
+                        </div>
+                    </>
+                }
                 <div className={styleSkills.skillsItem}>
                     {
                         allSkills.map(m => {

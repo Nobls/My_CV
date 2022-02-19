@@ -12,10 +12,40 @@
     width: 200px;
     height: 200px;
     background-color: #131416;
+    position: relative;
+}
+.skillCardItems:before,.skillCardItems:after{
+    position: absolute;
+    content: "";
+    transition: all .4s;
 }
 
-.skillCardItem {
+.skillCardItems:before{
+    border-bottom: 2px solid #dc965a;
+    border-left: 2px solid #dc965a;
+    width: 10%;
+    height: 15%;
+    left: -0px;
+    bottom: -0px;
+}
 
+.skillCardItems:after{
+    border-top: 2px solid #dc965a;
+    border-right: 2px solid #dc965a;
+    width: 10%;
+    height: 15%;
+    top: -0px;
+    right: -0px;
+}
+
+.skillCardItems:hover:before{
+    width: 99%;
+    height: 99%;
+}
+
+.skillCardItems:hover:after{
+    width: 99%;
+    height: 99%;
 }
 
 .skillCardItemTitle {

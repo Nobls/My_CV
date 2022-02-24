@@ -1,11 +1,7 @@
 .skills{
     padding: 100px 0;
     height: 100vh;
-    /*display: flex;*/
-    /*flex-direction: column;*/
     font-family: 'Nunito';
-    /*justify-content: space-evenly;*/
-    /*align-items: center;*/
 }
 
 .skillsBg{
@@ -14,7 +10,7 @@
 
 .skillsItemContainer{
     display: flex;
-
+    justify-content: space-between;
 }
 
 .cardStudyItem{

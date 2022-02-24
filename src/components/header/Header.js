@@ -25,8 +25,13 @@ const Header = (props) => {
         <div>
             <div className={styleHeader.header} id='header'>
                 <div>
-                    <Link to={'home'} spy={true} smooth={true}><img className={styleHeader.logo} src={logo} alt="logo"/></Link>
-                    {/*<img className={styleHeader.logo} src={logo} alt="logo"/>*/}
+                    <Link
+                        to={'home'}
+                        spy={true}
+                        smooth={true}
+                    >
+                        <img  src={logo} alt="logo"/>
+                    </Link>
                 </div>
                 <Nav lang={lang} setLang={setLang} themes={themes} setThemes={setThemes}/>
             </div>

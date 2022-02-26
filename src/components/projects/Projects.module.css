@@ -1,10 +1,20 @@
 .projectsBg{
     background-color: #131416;
+    padding: 120px 0;
 }
 
 .projects{
-    display: flex;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+/*    height: 100vh;*/
     justify-content: space-around;
     align-items: center;
+
+}
+
+.projectsTitle{
+    font-family: 'Nunito';
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(229,230,230);
 }

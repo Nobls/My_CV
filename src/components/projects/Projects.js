@@ -1,54 +1,104 @@
 import React from 'react';
 import style from '../../common/styles.module.css'
 import stylesProjects from './Projects.module.css'
-import ProjectCard from "../projectCard/ProjectCard";
+import ProjectCard from "../projectCard/ProjectCard"
+import gleeIcon from '../../images/imageProject/glee.png'
+import gleeModalIcon from '../../images/imageProject/gleeModal.jpg'
+import waveIcon from '../../images/imageProject/wavw.png'
+import waveModalIcon from '../../images/imageProject/waveModal.jpg'
+
 
 const Projects = () => {
 
     const projects = [
-        {id: 1,
-            image: '',
-            imageModal:'',
-            title: 'Shoes',
-            description: 'web-site',
-            descriptionModal:'description web-site',
-            url:'https://github.com/Nobls?tab=repositories'
+        {
+            id: 1,
+            image: gleeIcon,
+            imageModal: gleeModalIcon,
+            title: 'Glee',
+            description: 'Shop Web site',
+            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
+            url: 'https://glee-rho.vercel.app/'
         },
-        {id: 2,
-            image: '',
-            imageModal:'',
-            title: 'Coffee',
-            description: 'web-site',
-            descriptionModal:'description web-site',
-            url:'https://github.com/Nobls?tab=repositories'
+        {
+            id: 2,
+            image: waveIcon,
+            imageModal: waveModalIcon,
+            title: 'Wave',
+            description: 'Web site',
+            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
+            url: 'https://nobls.github.io/Wave/'
         },
-        {id: 3,
-            image: '',
-            imageModal:'',
-            title: 'Space Journey',
-            description: 'web-site',
-            descriptionModal:'description web-site',
-            url:'https://github.com/Nobls?tab=repositories'
+        {
+            id: 3,
+            image: gleeIcon,
+            imageModal: gleeModalIcon,
+            title: 'Shopping List',
+            description: 'Web site',
+            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
+            url: 'https://github.com/Nobls?tab=repositories'
         },
-        {id: 4,
-            image: '',
-            imageModal:'',
-            title: 'Shoes',
-            description: 'web-site',
-            descriptionModal:'description web-site',
-            url:'https://github.com/Nobls?tab=repositories'
+        {
+            id: 4,
+            image: gleeIcon,
+            imageModal: gleeModalIcon,
+            title: 'Cars Rent',
+            description: 'Web site',
+            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
+            url: 'https://github.com/Nobls?tab=repositories'
+        },
+        {
+            id: 5,
+            image: gleeIcon,
+            imageModal: gleeModalIcon,
+            title: 'Cars Rent',
+            description: 'Web site',
+            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
+            url: 'https://github.com/Nobls?tab=repositories'
+        },
+        {
+            id: 6,
+            image: gleeIcon,
+            imageModal: gleeModalIcon,
+            title: 'Cars Rent',
+            description: 'Web site',
+            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
+            url: 'https://github.com/Nobls?tab=repositories'
+        },
+        {
+            id: 7,
+            image: gleeIcon,
+            imageModal: gleeModalIcon,
+            title: 'Cars Rent',
+            description: 'Web site',
+            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
+            url: 'https://github.com/Nobls?tab=repositories'
+        },
+        {
+            id: 8,
+            image: gleeIcon,
+            imageModal: gleeModalIcon,
+            title: 'Cars Rent',
+            description: 'Web site',
+            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
+            url: 'https://github.com/Nobls?tab=repositories'
         },
     ]
 
     return (
         <div className={stylesProjects.projectsBg} id={'project'}>
-            <div className={`${style.container} ${stylesProjects.projects}`}>
+            <div className={style.container}>
+            <div className={stylesProjects.projectsTitle}>
+                <h3 className={stylesProjects.projectsTitle}>Project</h3>
+            </div>
+            <div className={`$ ${stylesProjects.projects}`}>
                 {
-                    projects.map(m=>{
-                        return(
+                    projects.map(m => {
+                        return (
                             <ProjectCard
                                 key={m.id}
                                 image={m.image}
+                                imageModal={m.imageModal}
                                 title={m.title}
                                 description={m.description}
                                 url={m.url}
@@ -58,7 +108,7 @@ const Projects = () => {
                         )
                     })
                 }
-
+            </div>
             </div>
         </div>
     );

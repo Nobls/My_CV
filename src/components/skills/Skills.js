@@ -177,7 +177,6 @@ const Skills = (props) => {
                         }
                     </div>
                     <div className={styleSkills.skillsItem}>
-
                         {
                             allSkills.map(m => {
                                 return (

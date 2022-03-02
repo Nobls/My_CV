@@ -3,7 +3,7 @@ import styleModal from './modal.module.css'
 import styleProjectCard from "../projectCard/ProjectCard.module.css";
 
 const Modal = (props) => {
-    const {active, setModalActive,descriptionModal,title,imageModal,url,} = props
+    const {active, setModalActive,descriptionModal,title,imageModal,url,lang,} = props
 
     return (
         <div className={active ? `${styleModal.modal} ${styleModal.active}` : styleModal.modal} onClick={()=>setModalActive(false)} id={'modal'}>
@@ -11,7 +11,15 @@ const Modal = (props) => {
                 <h3 className={styleModal.modalTitle}>{title}</h3>
                 <img className={styleModal.modalImg} src={imageModal} alt={title}/>
                 <p className={styleModal.modaldescription}>{descriptionModal}</p>
-                <a className={styleModal.modalLink} href={url} target='blank'>Open site</a>
+                {lang ?
+                    <>
+                        <a className={styleModal.modalLink} href={url} target='blank'>Open project</a>
+                    </>
+                    :
+                    <>
+                        <a className={styleModal.modalLink} href={url} target='blank'>Открыть проект</a>
+                    </>
+                }
             </div>
         </div>
     );

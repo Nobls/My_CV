@@ -1,0 +1,29 @@
+.scrollBtn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color:rgb(229,230,230);
+    color: #dc965a;
+    width: 55px;
+    height: 65px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 30px rgb(0 0 0 / 15%);
+    font-size: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+.scrollBtn span::before{
+    content: "⇑";
+}
+
+.scrollBtn:hover{
+    background: #dc965a;
+    color: rgb(229,230,230);
+    transform: translateY(-5px);
+}

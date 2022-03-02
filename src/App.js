@@ -5,8 +5,9 @@ import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
 import Form from "./components/form/Form";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import About from "./components/about/About";
+import ScrollBtn from "./components/btnScroll/ScrollBtn";
 
 
 function App() {
@@ -14,9 +15,19 @@ function App() {
     const [lang, setLang] = useState(true)
     const [themes,setThemes] = useState(true)
 
+    const [scroll, setScroll] = useState(0);
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+    const handleScroll = () => {
+        setScroll(window.scrollY);
+    };
+
   return (
       <div>
           <div className="App">
+              {scroll > document.documentElement.clientHeight && <ScrollBtn/>}
               <Header lang={lang} setLang={setLang} themes={themes} setThemes={setThemes}/>
               <Greetings lang={lang} themes={themes}/>
               <About lang={lang}/>

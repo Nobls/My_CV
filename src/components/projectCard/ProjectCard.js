@@ -3,7 +3,7 @@ import Modal from "../modal/Modal";
 import styleProjectCard from './ProjectCard.module.css'
 
 const ProjectCard = (props) => {
-    const {image, title, description, url,descriptionModal,projects, imageModal,} = props
+    const {image, title, description, url,descriptionModal,projects, imageModal,lang,} = props
     const [modalActive, setModalActive] = useState(false)
     const modalFilter = ()=> {
         projects.filter(f=>f.id === projects.id)
@@ -18,7 +18,15 @@ const ProjectCard = (props) => {
                 <h3 className={styleProjectCard.projectCardTitle}>{title}</h3>
                 <p className={styleProjectCard.projectSubTitle}>{description}</p>
                 <img className={styleProjectCard.projectCardImage} src={image} alt={title}/>
-                <div className={styleProjectCard.projectCardLink} href={'modal'}>See More</div>
+                {lang ?
+                    <>
+                        <div className={styleProjectCard.projectCardLink} href={'modal'}>See More</div>
+                    </>
+                    :
+                    <>
+                        <div className={styleProjectCard.projectCardLink} href={'modal'}>Узнать больше</div>
+                    </>
+                }
             </div>
             <Modal
                 imageModal={imageModal}
@@ -27,6 +35,7 @@ const ProjectCard = (props) => {
                 title={title}
                 descriptionModal={descriptionModal}
                 url={url}
+                lang={lang}
             />
         </div>
     );

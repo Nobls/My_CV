@@ -8,7 +8,9 @@ import waveIcon from '../../images/imageProject/wavw.png'
 import waveModalIcon from '../../images/imageProject/waveModal.jpg'
 
 
-const Projects = () => {
+const Projects = (props) => {
+
+    const {lang} = props
 
     const projects = [
         {
@@ -89,7 +91,15 @@ const Projects = () => {
         <div className={stylesProjects.projectsBg} id={'project'}>
             <div className={style.container}>
             <div className={stylesProjects.projectsTitle}>
-                <h3 className={stylesProjects.projectsTitle}>Project</h3>
+                {lang ?
+                    <>
+                        <h3 className={stylesProjects.projectsTitle}>Project</h3>
+                    </>
+                    :
+                    <>
+                        <h3 className={stylesProjects.projectsTitle}>Проекты</h3>
+                    </>
+                }
             </div>
             <div className={`$ ${stylesProjects.projects}`}>
                 {
@@ -104,6 +114,7 @@ const Projects = () => {
                                 url={m.url}
                                 projects={projects}
                                 descriptionModal={m.descriptionModal}
+                                lang={lang}
                             />
                         )
                     })

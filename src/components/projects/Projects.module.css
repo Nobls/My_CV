@@ -4,10 +4,11 @@
 }
 
 .projects{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-gap: 20px;
 /*    height: 100vh;*/
-    justify-content: space-around;
     align-items: center;
 
 }

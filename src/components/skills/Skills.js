@@ -132,31 +132,22 @@ const Skills = (props) => {
     return (
         <div className={styleSkills.skillsBg} id={'skills'}>
             <div className={`${styleSkills.skills} ${style.container}`}>
-                <div className={styleSkills.skillsTitleFlex}>
-                    <h3>Places of Study</h3>
-                    <h3>My Skills</h3>
-                </div>
-                {/*{lang ?
+                {lang ?
                     <>
-                        <div className={styleSkills.skillsTitleName}>
-                            <h3 className={styleSkills.skillsTitle}>My Skills</h3>
-                            <h5 className={styleSkills.skillsSubTitle}>
-                                I applied the knowledge of these skills to the creation of my own projects <br/> and
-                                those of my employers.
-                            </h5>
+                        <div className={styleSkills.skillsTitleFlex}>
+                            <h3>Places of Study</h3>
+                            <h3>My Skills</h3>
                         </div>
                     </>
                     :
                     <>
-                        <div>
-                            <h3 className={styleSkills.skillsTitle}>Мои Навыки</h3>
-                            <h5 className={styleSkills.skillsSubTitle}>
-                                Я применял эти навыки при создании собственных проектов <br/> и проектов моих
-                                работодателей.
-                            </h5>
+                        <div className={styleSkills.skillsTitleFlex}>
+                            <h3>Места Учебы</h3>
+                            <h3>Мои Навыки</h3>
                         </div>
                     </>
-                }*/}
+                }
+
                 <div className={styleSkills.skillsItemContainer}>
                     <div className={styleSkills.cardStudyItem}>
                         {
@@ -184,7 +175,6 @@ const Skills = (props) => {
                                         key={m.id}
                                         image={m.image}
                                         title={m.title}
-                                        /*description={m.description}*/
                                     />
                                 )
                             })

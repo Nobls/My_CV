@@ -4,7 +4,7 @@ const Social = (props) => {
     const {image, title, description, href} = props
     return (
         <div>
-            <a href={href} target="_blank">
+            <a href={href} target="blank">
                 <img src={image} alt={title}/>
             </a>
             <h4>{title}</h4>

@@ -30,7 +30,7 @@ const Header = (props) => {
                         spy={true}
                         smooth={true}
                     >
-                        <img  src={logo} alt="logo"/>
+                        <img src={logo} alt="logo"/>
                     </Link>
                 </div>
                 <Nav lang={lang} setLang={setLang} themes={themes} setThemes={setThemes}/>

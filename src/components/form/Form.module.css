@@ -1,7 +1,143 @@
-.form{
-    text-align: center;
+.form {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.formBg{
+.formBg {
     background-color: #1c1d24;
+}
+
+.formItemsBg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    background-color: #131416;
+    width: 50%;
+    height: 550px;
+    position: relative;
+    margin-right: 30px;
+    box-shadow: 0 0 8px 10px rgba(19, 20, 22, 0.5);
+}
+
+.formTitle{
+    font-size: 25px;
+    color: rgb(229,230,230);
+    margin-bottom: 30px;
+}
+
+.formItemsBg::before,.formItemsBg::after{
+    position: absolute;
+    content: "";
+    transition: all .4s;
+}
+
+.formItemsBg::before{
+    border-bottom: 2px solid #dc965a;
+    border-left: 2px solid #dc965a;
+    width: 10%;
+    height: 15%;
+    left: -0px;
+    bottom: -0px;
+}
+
+.formItemsBg::after{
+    border-top: 2px solid #dc965a;
+    border-right: 2px solid #dc965a;
+    width: 10%;
+    height: 15%;
+    top: 0;
+    right: 0;
+}
+
+.formItems {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 460px;
+    color: #dc965a;
+    padding: 25px;
+    position: relative;
+}
+
+.formItems::before,.formItems::after{
+    position: absolute;
+    content: "";
+    transition: all .4s;
+}
+
+.formItems::before{
+    border-top: 2px solid #dc965a;
+    border-left: 2px solid #dc965a;
+    width: 10%;
+    height: 15%;
+    top: -0px;
+    left: -0px;
+}
+
+.formItems::after{
+    border-bottom: 2px solid #dc965a;
+    border-right: 2px solid #dc965a;
+    width: 10%;
+    height: 15%;
+    bottom: 0;
+    right: 0;
+}
+
+.formInputItem{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.formInput{
+    height: 40px;
+    padding: 10px;
+    background: #1c1d24;
+    width: 200px;
+    border: none;
+    color: #dc965a;
+}
+.formInput::placeholder{
+    color: rgb(229,230,230);
+}
+
+.formTextarea{
+    width: 100%;
+    background: #1c1d24;
+    color: #dc965a;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.formTextarea::placeholder{
+    color: rgb(229,230,230);
+}
+
+.formBtn{
+    display: block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: #1c1d24;
+    color: rgb(229,230,230);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    transition: all 500ms ease;
+}
+
+.formBtn:hover{
+    text-decoration: none;
+    background: rgba(0,0,0,0);
+    color: #dc965a;
+    box-shadow: inset 0 0 0 3px #dc965a;
 }

@@ -15,11 +15,41 @@ const Nav = (props) => {
     }
 
     const navItem = [
-        {key: 1, id: 'home', title: 'Home', href: 'App.js'},
-        {key: 1, id: 'about', title: 'About me', href: 'About.js'},
-        {key: 2, id: 'skills', title: 'Skills', href: 'Skills.js'},
-        {key: 3, id: "project", title: 'Projects', href: 'Projects.js'},
-        {key: 4, id: "contacts", title: 'Contacts', href: 'Contacts.js'}
+        {
+            key: 1,
+            id: 'home',
+            titleEng: 'Home',
+            titleRu: 'Главная',
+            href: 'App.js',
+        },
+        {
+            key: 1,
+            id: 'about',
+            titleEng: 'About me',
+            titleRu: 'Обо мне',
+            href: 'About.js',
+        },
+        {
+            key: 2,
+            id: 'skills',
+            titleEng: 'Skills',
+            titleRu: 'Навыки',
+            href: 'Skills.js',
+        },
+        {
+            key: 3,
+            id: "project",
+            titleEng: 'Projects',
+            titleRu: 'Проекты',
+            href: 'Projects.js',
+        },
+        {
+            key: 4,
+            id: "contacts",
+            titleEng: 'Contacts',
+            titleRu: 'Контакты',
+            href: 'Contacts.js',
+        },
     ]
     return (
         <div className={` ${styleNav.nav}`}>
@@ -28,15 +58,31 @@ const Nav = (props) => {
                     navItem.map(m => {
                         return (
                             <li key={m.key}>
-                                <Link
-                                    className={styleNav.navLink}
-                                    activeClass={styleNav.active}
-                                    to={m.id}
-                                    spy={true}
-                                    smooth={true}
-                                >
-                                    {m.title}
-                                </Link>
+                                {lang ?
+                                    <>
+                                        <Link
+                                            className={styleNav.navLink}
+                                            activeClass={styleNav.active}
+                                            to={m.id}
+                                            spy={true}
+                                            smooth={true}
+                                        >
+                                            {m.titleEng}
+                                        </Link>
+                                    </>
+                                    :
+                                    <>
+                                        <Link
+                                            className={styleNav.navLink}
+                                            activeClass={styleNav.active}
+                                            to={m.id}
+                                            spy={true}
+                                            smooth={true}
+                                        >
+                                            {m.titleRu}
+                                        </Link>
+                                    </>
+                                }
                             </li>
                         )
                     })

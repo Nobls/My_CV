@@ -90,36 +90,36 @@ const Projects = (props) => {
     return (
         <div className={stylesProjects.projectsBg} id={'project'}>
             <div className={style.container}>
-            <div className={stylesProjects.projectsTitle}>
-                {lang ?
-                    <>
-                        <h3 className={stylesProjects.projectsTitle}>Project</h3>
-                    </>
-                    :
-                    <>
-                        <h3 className={stylesProjects.projectsTitle}>Проекты</h3>
-                    </>
-                }
-            </div>
-            <div className={`$ ${stylesProjects.projects}`}>
-                {
-                    projects.map(m => {
-                        return (
-                            <ProjectCard
-                                key={m.id}
-                                image={m.image}
-                                imageModal={m.imageModal}
-                                title={m.title}
-                                description={m.description}
-                                url={m.url}
-                                projects={projects}
-                                descriptionModal={m.descriptionModal}
-                                lang={lang}
-                            />
-                        )
-                    })
-                }
-            </div>
+                <div className={stylesProjects.projectsTitle}>
+                    {lang ?
+                        <>
+                            <h3 className={stylesProjects.projectsTitle}>Project</h3>
+                        </>
+                        :
+                        <>
+                            <h3 className={stylesProjects.projectsTitle}>Проекты</h3>
+                        </>
+                    }
+                </div>
+                <div className={stylesProjects.projects}>
+                    {
+                        projects.map(m => {
+                            return (
+                                <ProjectCard
+                                    key={m.id}
+                                    image={m.image}
+                                    imageModal={m.imageModal}
+                                    title={m.title}
+                                    description={m.description}
+                                    url={m.url}
+                                    projects={projects}
+                                    descriptionModal={m.descriptionModal}
+                                    lang={lang}
+                                />
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     );

@@ -37,7 +37,6 @@ function App() {
               <Footer lang={lang} themes={themes}/>
           </div>
       </div>
-
   );
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styleNav from './Nav.module.css'
 import {Link} from "react-scroll";
 import {Switch} from "antd";
@@ -6,13 +6,15 @@ import {Switch} from "antd";
 const Nav = (props) => {
     const {lang, setLang, themes, setThemes} = props
 
+    const [menuActive, setMenuActive] = useState(false)
+
     const changeLangHandler = () => {
       setLang(!lang)
     }
 
-    const changeThemesHandler  = ()=>{
+    /*const changeThemesHandler  = ()=>{
         setThemes(!themes)
-    }
+    }*/
 
     const navItem = [
         {
@@ -23,28 +25,28 @@ const Nav = (props) => {
             href: 'App.js',
         },
         {
-            key: 1,
+            key: 2,
             id: 'about',
             titleEng: 'About me',
             titleRu: 'Обо мне',
             href: 'About.js',
         },
         {
-            key: 2,
+            key: 3,
             id: 'skills',
             titleEng: 'Skills',
             titleRu: 'Навыки',
             href: 'Skills.js',
         },
         {
-            key: 3,
+            key: 4,
             id: "project",
             titleEng: 'Projects',
             titleRu: 'Проекты',
             href: 'Projects.js',
         },
         {
-            key: 4,
+            key: 5,
             id: "contacts",
             titleEng: 'Contacts',
             titleRu: 'Контакты',
@@ -52,55 +54,65 @@ const Nav = (props) => {
         },
     ]
     return (
-        <div className={` ${styleNav.nav}`}>
-            <ul className={styleNav.list}>
-                {
-                    navItem.map(m => {
-                        return (
-                            <li key={m.key}>
-                                {lang ?
-                                    <>
-                                        <Link
-                                            className={styleNav.navLink}
-                                            activeClass={styleNav.active}
-                                            to={m.id}
-                                            spy={true}
-                                            smooth={true}
-                                        >
-                                            {m.titleEng}
-                                        </Link>
-                                    </>
-                                    :
-                                    <>
-                                        <Link
-                                            className={styleNav.navLink}
-                                            activeClass={styleNav.active}
-                                            to={m.id}
-                                            spy={true}
-                                            smooth={true}
-                                        >
-                                            {m.titleRu}
-                                        </Link>
-                                    </>
-                                }
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-            <Switch checkedChildren="Eng"
-                    unCheckedChildren="Ru"
-                    defaultChecked
-                    onChange={changeLangHandler}
-                    className={styleNav.langBtn}
-            />
-            <Switch checkedChildren="Dark"
+        <>
+            <div className={menuActive ?  `${styleNav.navActive}` : `${styleNav.nav}`}>
+                <ul className={styleNav.list}>
+                    {
+                        navItem.map(m => {
+                            return (
+                                <li key={m.key}>
+                                    {lang ?
+                                        <>
+                                            <Link
+                                                className={styleNav.navLink}
+                                                activeClass={styleNav.active}
+                                                to={m.id}
+                                                spy={true}
+                                                smooth={true}
+                                                onClick={()=>(setMenuActive(false))}
+                                            >
+                                                {m.titleEng}
+
+                                            </Link>
+                                        </>
+                                        :
+                                        <>
+                                            <Link
+                                                className={styleNav.navLink}
+                                                activeClass={styleNav.active}
+                                                to={m.id}
+                                                spy={true}
+                                                smooth={true}
+                                            >
+                                                {m.titleRu}
+                                            </Link>
+                                        </>
+                                    }
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+                <Switch checkedChildren="Eng"
+                        unCheckedChildren="Ru"
+                        defaultChecked
+                        onChange={changeLangHandler}
+                        className={styleNav.langBtn}
+                />
+                {/*<Switch checkedChildren="Dark"
                     unCheckedChildren="Light"
                     defaultChecked
                     onChange={changeThemesHandler}
                     className={styleNav.langBtn}
-            />
-        </div>
+            />*/}
+            </div>
+            <button className={styleNav.burgerButton} onClick={()=>(setMenuActive(!menuActive))}>
+                <span>
+
+                </span>
+            </button>
+        </>
+
     );
 };
 

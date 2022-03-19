@@ -10,3 +10,8 @@
     width: 100%;
     transition: .6s;
 }
+
+.header a img {
+    width: 55px;
+    height: 55px;
+}

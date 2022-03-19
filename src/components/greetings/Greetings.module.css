@@ -7,7 +7,6 @@
     color: rgb(229,230,230);
     font-family: "Nunito", sans-serif;
     font-weight: 700;
-    font-size: 37px;
 }
 
 .bgColor{
@@ -22,6 +21,10 @@
 .light {
     background-color: white;
     color: black;
+}
+
+.title{
+    font-size: 74px;
 }
 
 .changeText{
@@ -71,5 +74,43 @@
     position: absolute;
     bottom: 0;
     right: 0;
+}
 
+@media screen and (max-width: 1365px){
+    .title{
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 1112px){
+    .title{
+        font-size: 50px;
+    }
+    .greetingBtn{
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .title{
+        font-size: 50px;
+    }
+
+    .changeText{
+        white-space: normal;
+        animation:none;
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .title{
+        font-size: 45px;
+    }
+    .greetingSocial{
+        display: flex;
+        justify-content: center;
+        left: 0;
+        padding-bottom: 50px;
+    }
 }

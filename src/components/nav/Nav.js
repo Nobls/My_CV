@@ -4,9 +4,7 @@ import {Link} from "react-scroll";
 import {Switch} from "antd";
 
 const Nav = (props) => {
-    const {lang, setLang, themes, setThemes} = props
-
-    const [menuActive, setMenuActive] = useState(false)
+    const {lang, setLang, themes, setThemes, menuActive, setMenuActive,} = props
 
     const changeLangHandler = () => {
       setLang(!lang)
@@ -55,7 +53,7 @@ const Nav = (props) => {
     ]
     return (
         <>
-            <div className={menuActive ?  `${styleNav.navActive}` : `${styleNav.nav}`}>
+            <div className={menuActive ?  `${styleNav.navActive}` : `${styleNav.nav}`} id='activeNav'>
                 <ul className={styleNav.list}>
                     {
                         navItem.map(m => {
@@ -83,6 +81,7 @@ const Nav = (props) => {
                                                 to={m.id}
                                                 spy={true}
                                                 smooth={true}
+                                                onClick={()=>(setMenuActive(false))}
                                             >
                                                 {m.titleRu}
                                             </Link>
@@ -106,7 +105,7 @@ const Nav = (props) => {
                     className={styleNav.langBtn}
             />*/}
             </div>
-            <button className={styleNav.burgerButton} onClick={()=>(setMenuActive(!menuActive))}>
+            <button className={styleNav.burgerButton} onClick={()=>(setMenuActive(!menuActive))} id='navBtn'>
                 <span>
 
                 </span>

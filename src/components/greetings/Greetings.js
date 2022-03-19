@@ -24,7 +24,7 @@ const Greetings = (props) => {
                 {lang ?
                     <>
                         <div>
-                            <h1>Hello,<br/> I'm Sergei Veretilo a<br/><div className={styleGreetings.changeText} style={{color:'#dc965a'}}>React Front - End Developer</div></h1>
+                            <h1 className={styleGreetings.title}>Hello,<br/> I'm Sergei Veretilo a<br/><div className={styleGreetings.changeText} style={{color:'#dc965a'}}>React Front - End Developer</div></h1>
                         </div>
                         <div>
                         </div>
@@ -33,7 +33,7 @@ const Greetings = (props) => {
                     :
                     <>
                         <div >
-                            <h1>Превет,<br/>Я Сергей Веретило и<br/><div className={styleGreetings.changeText} style={{color:'#dc965a'}}>Я React Фронт-Енд Разработчик</div></h1>
+                            <h1 className={styleGreetings.title}>Превет,<br/>Я Сергей Веретило и<br/><p className={styleGreetings.changeText} style={{color:'#dc965a'}}>Я React Фронт-Енд Разработчик</p></h1>
                         </div>
                         <div>
                         </div>

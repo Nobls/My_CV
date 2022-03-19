@@ -16,6 +16,7 @@
     font-size: 30px;
     cursor: pointer;
     outline: none;
+    margin-left: 15px;
 }
 
 .scrollBtn span::before{
@@ -26,4 +27,11 @@
     background: #dc965a;
     color: rgb(229,230,230);
     transform: translateY(-5px);
+}
+
+@media screen and (max-width: 414px){
+    .scrollBtn{
+        width: 40px;
+        height: 50px;
+    }
 }

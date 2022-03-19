@@ -105,12 +105,24 @@
 
 @media screen and (max-width: 768px){
     .title{
-        font-size: 45px;
+        font-size: 44px;
     }
     .greetingSocial{
         display: flex;
         justify-content: center;
         left: 0;
-        padding-bottom: 50px;
+        padding-bottom: 55px;
+    }
+}
+
+@media screen and (max-width: 568px){
+    .title{
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .title{
+        font-size: 35px;
     }
 }

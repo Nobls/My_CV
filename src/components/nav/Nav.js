@@ -92,8 +92,8 @@ const Nav = (props) => {
                         })
                     }
                 </ul>
-                <Switch checkedChildren="Eng"
-                        unCheckedChildren="Ru"
+                <Switch checkedChildren="Ru"
+                        unCheckedChildren="Eng"
                         defaultChecked
                         onChange={changeLangHandler}
                         className={styleNav.langBtn}

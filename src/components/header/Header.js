@@ -28,12 +28,12 @@ const Header = (props) => {
 
             if (menuActive) {
                 document.getElementById("header").style.height = "205px";
+                document.getElementById("header").style.position = "fixed";
                 document.getElementById("header").style.backgroundColor = 'rgb(28,29,36)';
             } else {
                 document.getElementById("header").style.height = "65px";
                 document.getElementById("header").style.backgroundColor = "rgb(28,29,36)";
             }
-
         }
     })
 

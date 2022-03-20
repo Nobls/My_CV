@@ -1,7 +1,6 @@
 .skills{
     padding: 160px 0;
-    /*height: 100vh;*/
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
 }
 
 .skillsBg{
@@ -14,25 +13,30 @@
 }
 
 .cardStudyItem{
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 400px;
 }
 
 .skillsItem{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    width: 690px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 30px;
 }
 
-.skillsTitleFlex{
-    display: flex;
-    justify-content: space-between;
+.skillsTitle{
     font-size: 40px;
     margin-bottom: 50px;
     color: rgb(229,230,230);
+}
+
+.skillsTitleSkill{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .skillsTitle{
@@ -46,3 +50,44 @@
     font-weight: 600;
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 1120px){
+    .skillsItemContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .skillsTitleSkill{
+        justify-content: flex-start;
+    }
+
+    .skillsItem{
+        justify-content: flex-start;
+        margin-bottom: 100px;
+    }
+    .cardStudyItem{
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 667px){
+    .skills {
+        padding: 100px 0;
+    }
+
+    .skillsTitle{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 667px){
+    .skillsTitleSkill{
+        justify-content: center;
+    }
+    .skillsItem{
+        justify-content: center;
+    }
+}
+

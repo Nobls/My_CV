@@ -67,6 +67,12 @@
     padding-right: 30px;
 }
 
+@media screen and (max-width: 710px){
+    .list li{
+        margin-right: 11px;
+    }
+}
+
 @media screen and (max-width: 667px){
 
     .nav{

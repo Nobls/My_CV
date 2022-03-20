@@ -140,6 +140,10 @@
     .aboutCV a {
         margin-bottom: 20px;
     }
+
+    .aboutMedia{
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 736px){
@@ -170,6 +174,7 @@
 
     .aboutCV a {
         width: 200px;
+        font-size: 15px;
     }
 }
 
@@ -190,7 +195,7 @@
     .aboutCV a {
         width: 160px;
         padding: 12px 20px;
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 

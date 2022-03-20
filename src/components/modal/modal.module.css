@@ -68,3 +68,39 @@
     background: rgba(0,0,0,0);
     color: #dc965a;
 }
+
+@media screen and (max-width: 834px){
+    .modalContent{
+        width: 620px;
+        height: 515px;
+    }
+}
+
+@media screen and (max-width: 667px){
+    .modalContent{
+        width: 500px;
+        height: 470px;
+    }
+
+    .modalLink{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 568px){
+    .modalContent{
+        width: 400px;
+        height: 400px;
+    }
+
+    .modalTitle{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .modalContent{
+        width: 315px;
+        height: 380px;
+    }
+}

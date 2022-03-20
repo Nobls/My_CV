@@ -132,24 +132,23 @@ const Skills = (props) => {
     return (
         <div className={styleSkills.skillsBg} id={'skills'}>
             <div className={`${styleSkills.skills} ${style.container}`}>
-                {lang ?
-                    <>
-                        <div className={styleSkills.skillsTitleFlex}>
-                            <h3>Places of Study</h3>
-                            <h3>My Skills</h3>
-                        </div>
-                    </>
-                    :
-                    <>
-                        <div className={styleSkills.skillsTitleFlex}>
-                            <h3>Места Учебы</h3>
-                            <h3>Мои Навыки</h3>
-                        </div>
-                    </>
-                }
-
                 <div className={styleSkills.skillsItemContainer}>
                     <div className={styleSkills.cardStudyItem}>
+                        <div>
+                            {lang ?
+                                <>
+                                    <div className={`${styleSkills.skillsTitleStudy} ${styleSkills.skillsTitle}`}>
+                                        <h3>Places of Study</h3>
+                                    </div>
+                                </>
+                                :
+                                <>
+                                    <div className={`${styleSkills.skillsTitleStudy} ${styleSkills.skillsTitle}`}>
+                                        <h3>Места Учебы</h3>
+                                    </div>
+                                </>
+                            }
+                        </div>
                         {
                             placesOfStudy.map(m => {
                                 return (
@@ -167,19 +166,42 @@ const Skills = (props) => {
                             })
                         }
                     </div>
-                    <div className={styleSkills.skillsItem}>
-                        {
-                            allSkills.map(m => {
-                                return (
-                                    <SkillCard
-                                        key={m.id}
-                                        image={m.image}
-                                        title={m.title}
-                                    />
-                                )
-                            })
-                        }
+
+
+                    <div>
+                        <div >
+                            {lang ?
+                                <>
+                                    <div className={`${styleSkills.skillsTitleSkill} ${styleSkills.skillsTitle}`}>
+                                        <h3>My Skills</h3>
+                                    </div>
+                                </>
+                                :
+                                <>
+                                    <div className={`${styleSkills.skillsTitleSkill} ${styleSkills.skillsTitle}`}>
+                                        <h3>Мои Навыки</h3>
+                                    </div>
+                                </>
+                            }
+                        </div>
+                        <div className={styleSkills.skillsItem}>
+                            {
+                                allSkills.map(m => {
+                                    return (
+                                        <SkillCard
+                                            key={m.id}
+                                            image={m.image}
+                                            title={m.title}
+                                        />
+                                    )
+                                })
+                            }
+                        </div>
+
+
                     </div>
+
+
                 </div>
 
             </div>

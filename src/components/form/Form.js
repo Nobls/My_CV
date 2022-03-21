@@ -39,56 +39,61 @@ const Form = (props) => {
 
     return (
         <div className={styleForm.formBg}>
-            <div className={`${style.container} ${styleForm.form}`}>
-                <div className={styleForm.formItemsBg}>
-                    {lang ?
-                        <>
-                            <h5 className={styleForm.formTitle}>Contact with me</h5>
-                        </>
-                        :
-                        <>
-                            <h5 className={styleForm.formTitle}>Связаться со мной</h5>
-                        </>
-                    }
-                    <form className={styleForm.formItems}>
-                        <div className={styleForm.formInputItem}>
-                            <input className={styleForm.formInput} type="text" placeholder='Name'/>
-                            <input className={styleForm.formInput} type="text" placeholder='E-mail'/>
-                        </div>
-                        <div>
-                            <textarea className={styleForm.formTextarea} cols="30" rows="10" placeholder={'Enter your' +
-                                ' message'}>
-
-                            </textarea>
-                        </div>
+            <div className={style.container}>
+                <div className={styleForm.form}>
+                    <div className={styleForm.formItemsBg}>
                         {lang ?
                             <>
-                                <button className={styleForm.formBtn} type={"submit"}>Send message</button>
+                                <h5 className={styleForm.formTitle}>Contact with me</h5>
                             </>
                             :
                             <>
-                                <button className={styleForm.formBtn} type={"submit"}>Отправить сообщение</button>
+                                <h5 className={styleForm.formTitle}>Связаться со мной</h5>
                             </>
                         }
-                    </form>
+                        <form className={styleForm.formItems}>
+                            <div className={styleForm.formInputItem}>
+                                <input className={styleForm.formInput} type="text" placeholder='Name'/>
+                                <input className={styleForm.formInput} type="text" placeholder='E-mail'/>
+                            </div>
+                            <div>
+                            <textarea className={styleForm.formTextarea} cols="20" rows="8" placeholder={'Enter' +
+                                ' your' +
+                                ' message'}>
+
+                            </textarea>
+                            </div>
+                            {lang ?
+                                <>
+                                    <button className={styleForm.formBtn} type={"submit"}>Send message</button>
+                                </>
+                                :
+                                <>
+                                    <button className={styleForm.formBtn} type={"submit"}>Отправить сообщение</button>
+                                </>
+                            }
+                        </form>
+                    </div>
+                    <div>
+                        {
+                            contacts.map(m => {
+                                return (
+                                    <Contact
+                                        key={m.id}
+                                        image={m.image}
+                                        titleEng={m.titleEng}
+                                        titleRu={m.titleRu}
+                                        descriptionEng={m.descriptionEng}
+                                        descriptionRu={m.descriptionRu}
+                                        lang={lang}
+                                    />
+                                )
+                            })
+                        }
+                    </div>
                 </div>
-                <div >
-                    {
-                        contacts.map(m => {
-                            return (
-                                <Contact
-                                    key={m.id}
-                                    image={m.image}
-                                    titleEng={m.titleEng}
-                                    titleRu={m.titleRu}
-                                    descriptionEng={m.descriptionEng}
-                                    descriptionRu={m.descriptionRu}
-                                    lang={lang}
-                                />
-                            )
-                        })
-                    }
-                </div>
+
+
             </div>
 
         </div>

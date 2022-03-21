@@ -20,11 +20,11 @@ const ProjectCard = (props) => {
                 <img className={styleProjectCard.projectCardImage} src={image} alt={title}/>
                 {lang ?
                     <>
-                        <div className={styleProjectCard.projectCardLink} href={'modal'}>See More</div>
+                        <div className={styleProjectCard.projectCardLink}>See More</div>
                     </>
                     :
                     <>
-                        <div className={styleProjectCard.projectCardLink} href={'modal'}>Узнать больше</div>
+                        <div className={styleProjectCard.projectCardLink}>Узнать больше</div>
                     </>
                 }
             </div>

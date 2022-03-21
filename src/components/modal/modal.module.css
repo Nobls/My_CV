@@ -10,7 +10,7 @@
     justify-content: center;
     transform: scale(0);
     z-index: 1;
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
 
 }
 
@@ -40,7 +40,7 @@
     width: 760px;
 }
 
-.modaldescription{
+.modalDescription{
     color: #878e99;
 }
 

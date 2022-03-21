@@ -33,8 +33,8 @@ function App() {
               <About lang={lang}/>
               <Skills lang={lang} themes={themes}/>
               <Projects lang={lang} themes={themes}/>
-              {/*<Form lang={lang} themes={themes}/>*/}
-              {/*<Footer lang={lang} themes={themes}/>*/}
+              <Form lang={lang} themes={themes}/>
+              <Footer lang={lang} themes={themes}/>
           </div>
       </div>
   );

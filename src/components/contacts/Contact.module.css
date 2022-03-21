@@ -1,13 +1,13 @@
-.contact{
+.contact {
     display: flex;
     margin-bottom: 50px;
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
     align-items: center;
     position: relative;
 }
 
-.contactTitle{
-    margin-right: 5px;
+.contactTitle {
+    margin-right: 10px;
     font-size: 18px;
-    color: rgb(229,230,230);
+    color: rgb(229, 230, 230);
 }

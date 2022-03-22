@@ -122,7 +122,11 @@
 }
 
 @media screen and (max-width: 414px){
+    .greetings{
+        align-items: normal;
+    }
+
     .title{
-        font-size: 35px;
+        font-size: 34px;
     }
 }

@@ -1,9 +1,9 @@
-.projectsBg{
+.projectsBg {
     background-color: #131416;
     padding: 120px 0;
 }
 
-.projects{
+.projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -12,20 +12,30 @@
 
 }
 
-.projectsTitle{
-    font-family: 'Nunito';
+.projectsTitle {
+    font-family: 'Nunito', sans-serif;
     font-size: 40px;
     margin-bottom: 20px;
-    color: rgb(229,230,230);
+    color: rgb(229, 230, 230);
 }
 
-@media screen and (max-width: 1680px){
-    .projectsTitle{
+@media screen and (max-width: 1680px) {
+    .projectsTitle {
         text-align: center;
     }
 
-    .projects{
+    .projects {
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 906px) {
+    .projectsBg {
+        padding: 100px 0;
+    }
+
+    .projects {
+        display: block;
     }
 }
 

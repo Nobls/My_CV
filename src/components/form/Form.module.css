@@ -162,7 +162,7 @@
     }
 
     .formItemsBg{
-        width: 75%;
+        width: 90%;
         margin-bottom: 50px;
         margin-right: 0;
     }
@@ -172,17 +172,13 @@
 
 @media screen and (max-width: 834px){
     .formItemsBg{
-        width: 90%;
         height: 455px;
     }
 }
 
 @media screen and (max-width: 568px){
     .formItemsBg{
-        width: 95%;
+        width: 100%;
+        height: 435px;
     }
-}
-
-@media screen and (max-width: 375px){
-
 }

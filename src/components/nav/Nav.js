@@ -7,7 +7,7 @@ const Nav = (props) => {
     const {lang, setLang, themes, setThemes, menuActive, setMenuActive,} = props
 
     const changeLangHandler = () => {
-      setLang(!lang)
+        setLang(!lang)
     }
 
     /*const changeThemesHandler  = ()=>{
@@ -53,40 +53,23 @@ const Nav = (props) => {
     ]
     return (
         <>
-            <div className={menuActive ?  `${styleNav.navActive}` : `${styleNav.nav}`} id='activeNav'>
+            <div className={menuActive ? `${styleNav.navActive}` : `${styleNav.nav}`} id='activeNav'>
                 <ul className={styleNav.list}>
                     {
                         navItem.map(m => {
                             return (
                                 <li key={m.key}>
-                                    {lang ?
-                                        <>
-                                            <Link
-                                                className={styleNav.navLink}
-                                                activeClass={styleNav.active}
-                                                to={m.id}
-                                                spy={true}
-                                                smooth={true}
-                                                onClick={()=>(setMenuActive(false))}
-                                            >
-                                                {m.titleEng}
+                                    <Link
+                                        className={styleNav.navLink}
+                                        activeClass={styleNav.active}
+                                        to={m.id}
+                                        spy={true}
+                                        smooth={true}
+                                        onClick={() => (setMenuActive(false))}
+                                    >
+                                        {lang ? m.titleEng : m.titleRu}
+                                    </Link>
 
-                                            </Link>
-                                        </>
-                                        :
-                                        <>
-                                            <Link
-                                                className={styleNav.navLink}
-                                                activeClass={styleNav.active}
-                                                to={m.id}
-                                                spy={true}
-                                                smooth={true}
-                                                onClick={()=>(setMenuActive(false))}
-                                            >
-                                                {m.titleRu}
-                                            </Link>
-                                        </>
-                                    }
                                 </li>
                             )
                         })
@@ -105,7 +88,7 @@ const Nav = (props) => {
                     className={styleNav.langBtn}
             />*/}
             </div>
-            <button className={styleNav.burgerButton} onClick={()=>(setMenuActive(!menuActive))} id='navBtn'>
+            <button className={styleNav.burgerButton} onClick={() => (setMenuActive(!menuActive))} id='navBtn'>
                 <span>
 
                 </span>

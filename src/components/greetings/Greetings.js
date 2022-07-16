@@ -33,7 +33,7 @@ const Greetings = (props) => {
                     :
                     <>
                         <div >
-                            <h1 className={styleGreetings.title}>Превет,<br/>Я Сергей Веретило и<br/><p className={styleGreetings.changeText} style={{color:'#dc965a'}}>Я Front - End Developer (React)</p></h1>
+                            <h1 className={styleGreetings.title}>Привет,<br/>Я Сергей Веретило и<br/><p className={styleGreetings.changeText} style={{color:'#dc965a'}}>Я Front - End Developer (React)</p></h1>
                         </div>
                         <div>
                         </div>

@@ -3,6 +3,10 @@ import style from '../../common/styles.module.css'
 import stylesProjects from './Projects.module.css'
 import ProjectCard from "../projectCard/ProjectCard"
 import gleeIcon from '../../images/imageProject/glee.png'
+import shoppingList from '../../images/imageProject/shoppingList.png'
+import shoppingListModal from '../../images/imageProject/shoppingList.png'
+import carRentalModal from '../../images/imageProject/carRental.png'
+import carRental from '../../images/imageProject/carRental.png'
 import gleeModalIcon from '../../images/imageProject/gleeModal.jpg'
 import waveIcon from '../../images/imageProject/wavw.png'
 import waveModalIcon from '../../images/imageProject/waveModal.jpg'
@@ -33,30 +37,30 @@ const Projects = (props) => {
         },
         {
             id: 3,
-            image: gleeIcon,
-            imageModal: gleeModalIcon,
+            image: shoppingList,
+            imageModal: shoppingListModal,
             title: 'Shopping List',
             description: 'Web site',
             descriptionModal: 'this site is built with HTML 5, ScSS, JS',
-            url: 'https://github.com/Nobls?tab=repositories'
+            url: 'https://nobls.github.io/ShoppingList/'
         },
         {
             id: 4,
-            image: gleeIcon,
-            imageModal: gleeModalIcon,
+            image: carRental,
+            imageModal: carRentalModal,
             title: 'Cars Rent',
             description: 'Web site',
             descriptionModal: 'this site is built with HTML 5, ScSS, JS',
-            url: 'https://github.com/Nobls?tab=repositories'
+            url: 'https://nobls.github.io/car-rental/'
         },
         {
             id: 5,
-            image: gleeIcon,
-            imageModal: gleeModalIcon,
+            image: carRental,
+            imageModal: carRentalModal,
             title: 'Cars Rent',
             description: 'Web site',
             descriptionModal: 'this site is built with HTML 5, ScSS, JS',
-            url: 'https://github.com/Nobls?tab=repositories'
+            url: 'https://nobls.github.io/car-rental/'
         },
         {
             id: 6,

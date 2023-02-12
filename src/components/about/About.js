@@ -23,7 +23,7 @@ const About = (props) => {
                                     <p className={styleAbout.aboutDescription}>
                                         I'm frontend developer with
                                         experience in creating SPA
-                                        using React, Redux,
+                                        using React, Redux,redux-Toolkit,Axios,React-Router-Dom,
                                         TypeScript, JavaScript,
                                         SCSS, HTML. Usualy
                                         i prefer to spend my leisure
@@ -43,7 +43,7 @@ const About = (props) => {
                                             </div>
                                             <div className={styleAbout.aboutMedia}>
                                                 <label>Age :</label>
-                                                <p>29</p>
+                                                <p>30</p>
                                             </div>
                                             <div className={styleAbout.aboutMedia}>
                                                 <label>Residence :</label>
@@ -84,10 +84,12 @@ const About = (props) => {
                                     <h3 className={styleAbout.aboutTitle}>Сергей Веретило</h3>
                                     <h5 className={styleAbout.aboutSubTitle}>Фронт-Енд Разработчик</h5>
                                     <p className={styleAbout.aboutDescription}>
-                                        Здесь при наведении появляется яркий цветной градиент, который следует за
-                                        передвижением курсора. В реализации используются CSS переменные, а также скрипт
-                                        определения позиции мышки. Результат выглядит это достаточно оригинально. Описание
-                                        метода ищите тут.!!
+                                        Я frontend разработчик с опытом создания SPA с использованием React,
+                                        Redux,redux-Toolkit,Axios,React-Router-Dom,
+                                        TypeScript, JavaScript,
+                                        SCSS, HTML. Обычно я предпочитаю проводить свободное
+                                        время, улучшая свой английский, изучая новые технологии и решая задачи на
+                                        Codewars. Готов рассмотреть проектную работу и полную занятость.
                                     </p>
                                     <div className={styleAbout.aboutList}>
                                         <div>
@@ -97,7 +99,7 @@ const About = (props) => {
                                             </div>
                                             <div className={styleAbout.aboutMedia}>
                                                 <label>Возраст :</label>
-                                                <p>29</p>
+                                                <p>30</p>
                                             </div>
                                             <div className={styleAbout.aboutMedia}>
                                                 <label>Проживание :</label>

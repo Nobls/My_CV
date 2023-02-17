@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My_CV/static/css/main.bb5b801f.css",
-    "main.js": "/My_CV/static/js/main.7b6607f1.js",
+    "main.js": "/My_CV/static/js/main.d624cb40.js",
     "static/js/787.1ed0c42c.chunk.js": "/My_CV/static/js/787.1ed0c42c.chunk.js",
     "static/media/waveModal.jpg": "/My_CV/static/media/waveModal.85c80877220e2d6e0e52.jpg",
     "static/media/carRental.png": "/My_CV/static/media/carRental.b73e2f48eba83e37b840.png",
@@ -20,11 +20,11 @@
     "static/media/instagram.svg": "/My_CV/static/media/instagram.58ce66ecb55496a7097a439b24291bfa.svg",
     "static/media/linkedin.svg": "/My_CV/static/media/linkedin.4245811a30473501c91ec9a504354db2.svg",
     "main.bb5b801f.css.map": "/My_CV/static/css/main.bb5b801f.css.map",
-    "main.7b6607f1.js.map": "/My_CV/static/js/main.7b6607f1.js.map",
+    "main.d624cb40.js.map": "/My_CV/static/js/main.d624cb40.js.map",
     "787.1ed0c42c.chunk.js.map": "/My_CV/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bb5b801f.css",
-    "static/js/main.7b6607f1.js"
+    "static/js/main.d624cb40.js"
   ]
 }

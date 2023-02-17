@@ -53,42 +53,6 @@ const Projects = (props) => {
             descriptionModal: 'this site is built with HTML 5, ScSS, JS',
             url: 'https://nobls.github.io/car-rental/'
         },
-        {
-            id: 5,
-            image: carRental,
-            imageModal: carRentalModal,
-            title: 'Cars Rent',
-            description: 'Web site',
-            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
-            url: 'https://nobls.github.io/car-rental/'
-        },
-        {
-            id: 6,
-            image: gleeIcon,
-            imageModal: gleeModalIcon,
-            title: 'Cars Rent',
-            description: 'Web site',
-            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
-            url: 'https://github.com/Nobls?tab=repositories'
-        },
-        {
-            id: 7,
-            image: gleeIcon,
-            imageModal: gleeModalIcon,
-            title: 'Cars Rent',
-            description: 'Web site',
-            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
-            url: 'https://github.com/Nobls?tab=repositories'
-        },
-        {
-            id: 8,
-            image: gleeIcon,
-            imageModal: gleeModalIcon,
-            title: 'Cars Rent',
-            description: 'Web site',
-            descriptionModal: 'this site is built with HTML 5, ScSS, JS',
-            url: 'https://github.com/Nobls?tab=repositories'
-        },
     ]
 
     return (
